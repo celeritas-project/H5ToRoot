@@ -25,3 +25,4 @@
 *.h5
 *.hdf5
 build/
+build-xcode/
