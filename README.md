@@ -54,23 +54,23 @@ std::vector<TString>   datasetList;
 
 ## Constructors
 
-Case when the user wants the .root filename to be the same as the .h5 file
-(apart from the file extension):  
 `H5ToRoot(TString   h5InputFilename,
-          TString   rootFilename);`
+          TString   tallyGroupName);`   
+Case the user wants the .root filename to be the same as the .h5 file
+(apart from the file extension).
 
 
-Case of a user-specified root filename:  
 `H5ToRoot(TString   h5InputFilename,
           TString   tallyGroupName,
-          TString   rootFilename);`
+          TString   rootFilename);`   
+Case of a user-specified root filename.
 
 
+`H5ToRoot(TString   h5InputFilename,
+          TString   tallyGroupName,
+          std::shared_ptr<TFile> rootFile);`   
 Case the user wants to point to an existing root file. This adds the possibility
-to write several tallies to a single root file:
-`H5ToRoot(TString   h5InputFilename,
-          TString   tallyGroupName,
-          std::shared_ptr<TFile> rootFile);`
+to write several tallies to a single root file.
 
 
 ## Public class methods
